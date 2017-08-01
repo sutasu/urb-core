@@ -10,6 +10,7 @@ install:
   - sudo /usr/bin/easy_install nose nosexcover mock==1.0.1 gevent pymongo sortedcontainers xmltodict redis
 
 script:
+  - which nosetests
   - make
   - make test
 
