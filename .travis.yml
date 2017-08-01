@@ -6,7 +6,8 @@ compiler:
 before_install:
 
 install:
-  - sudo apt-get install openjdk-8-jdk python python-setuptools python-virtualenv libev-dev uuid-dev zlib1g-dev
+  - sudo apt-get install openjdk-8-jdk python python-pip python-virtualenv libev-dev uuid-dev zlib1g-dev
+  - sudo pip install python-setuptools
   - sudo /usr/bin/easy_install nose nosexcover mock==1.0.1 gevent pymongo sortedcontainers xmltodict redis
 
 script:
