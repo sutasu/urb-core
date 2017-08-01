@@ -8,7 +8,7 @@ before_install:
 install:
   - sudo apt-get install openjdk-8-jdk python-pip libev-dev uuid-dev zlib1g-dev
 #  - pip install -U pip wheel
-  - sudo pip install setuptools
+  - sudo pip install setuptools==36.2.6
   - sudo /usr/bin/easy_install virtualenv
   - sudo /usr/bin/easy_install nose nosexcover mock==1.0.1 gevent pymongo sortedcontainers xmltodict redis
 
