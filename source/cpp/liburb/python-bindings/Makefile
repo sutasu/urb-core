@@ -97,7 +97,7 @@ $(VIRTUALENV)/.built:
 # "bad interpreter: No such file or directory" error. So the workaround is to run easy_install directly:
 # python /path/to/easy_install
 $(VIRTUALENV)/.egg-installed: $(VIRTUALENV)/.built $(PYTHONEGG) $(PYTHONEGG_INTERFACE) $(PYTHONEGG_NATIVE) $(PYTHONEGG_SCHEDULER) $(PYTHONEGG_EXECUTOR)
-	. $(VIRTUALENV)/bin/activate && python `which easy_install` $(PYTHONEGG_INTERFACE) $(PYTHONEGG_SCHEDULER) $(PYTHONEGG_EXECUTOR) $(PYTHONEGG_NATIVE)
+	. $(VIRTUALENV)/bin/activate && python `which easy_install` gevent $(PYTHONEGG_INTERFACE) $(PYTHONEGG_SCHEDULER) $(PYTHONEGG_EXECUTOR) $(PYTHONEGG_NATIVE)
 	touch $@
 
 $(MESOS_PROTO_TARGET) : $(MESOS_PROTO_INC)
